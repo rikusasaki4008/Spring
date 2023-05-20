@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset='UTF-8'>
+	<title th:text=${title}></title>
+</head>
+
+<body>
+	<h1 th:text='${title}'></h1>
+	<table border="1">
+		<tr>
+			<th>ユーザID</th>
+			<th>名前</th>
+			<th>メールアドレス</th>
+		</tr>
+		<tr th:each='results : ${results}'>
+			<td th:text='${results.id}'></td>
+			<td th:text='${results.name}'></td>
+			<td th:text='${results.email}'></td>
+		</tr>
+		<tr th:each='map : ${map}'>
+			<td th:text='${map.id}'></td>
+			<td th:text='${map.name}'></td>
+			<td th:text='${map.email}'></td>
+		</tr>
+	</table>
+
+</body>
+
+</html>
