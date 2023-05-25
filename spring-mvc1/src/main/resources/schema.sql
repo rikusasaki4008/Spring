@@ -6,3 +6,12 @@ CREATE TABLE users (
 	update_at DATETIME NOT NULL,
 	PRIMARY KEY(id)
 	);
+	
+CREATE TABLE boards (
+	id INT NOT NULL AUTO_INCREMENT,
+	title VARCHAR(20) NOT NULL,
+	content VARCHAR(140) NOT NULL,
+	create_at DATETIME NOT NULL,
+	update_at DATETIME NOT NULL,
+	PRIMARY KEY(id)
+	);

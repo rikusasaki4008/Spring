@@ -14,15 +14,10 @@
 			<th>名前</th>
 			<th>メールアドレス</th>
 		</tr>
-		<tr th:each='results : ${results}'>
-			<td th:text='${results.id}'></td>
-			<td th:text='${results.name}'></td>
-			<td th:text='${results.email}'></td>
-		</tr>
-		<tr th:each='map : ${map}'>
-			<td th:text='${map.id}'></td>
-			<td th:text='${map.name}'></td>
-			<td th:text='${map.email}'></td>
+		<tr th:each='user : ${user}'>
+			<td th:text='${user.getId()}'></td>
+			<td th:text='${user.getName()}'></td>
+			<td th:text='${user.getEmail()}'></td>
 		</tr>
 	</table>
 
