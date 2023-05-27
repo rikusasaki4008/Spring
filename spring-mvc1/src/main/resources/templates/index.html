@@ -30,7 +30,8 @@
 					<tr>
 						<th class="col-2">タイトル</th>
 						<th class="col-6">つぶやき</th>
-						<th class="col-4">更新日</th>
+						<th class="col-3">更新日</th>
+						<th class="col-1">詳細</th>
 					</tr>
 				</thead>
 
@@ -38,6 +39,7 @@
 					<td th:text='${board.getTitle()}'></td>
 					<td th:text='${board.getContent()}'></td>
 					<td th:text='${#temporals.format(board.getUpdateAt(), "yyyy/MM/dd HH:mm")}' class="text-center"></td>
+<!--					<td th:text='${board.getId()}' class="btn btn-primary"></td>-->
 				</tr>
 			</table>
 		</div>

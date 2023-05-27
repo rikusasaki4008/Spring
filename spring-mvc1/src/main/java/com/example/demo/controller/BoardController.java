@@ -14,26 +14,29 @@ import com.example.demo.service.BoardService;
 @Controller
 @RequestMapping("/board")
 public class BoardController {
-	
+
 	@Autowired
 	private BoardService boardService;
-	
+
 	public BoardController(BoardService boardService) {
 		this.boardService = boardService;
 	}
-	
+
 	@GetMapping("/index")
 	public String index(Model model) {
-		
+
 		model.addAttribute("header", "SimpleBoard");
 		model.addAttribute("title", "タイムライン");
-		
+
 		List<Board> board = boardService.getAll();
 		model.addAttribute("board", board);
-		
-		
+
 		return "index";
 	}
 	
+//	@GetMapping("/show")
+//	public String show(Model model, int id) {
+//	return "show";	
+//	}
 
 }
